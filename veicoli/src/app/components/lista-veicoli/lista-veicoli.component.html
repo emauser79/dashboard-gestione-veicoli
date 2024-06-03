@@ -1,0 +1,12 @@
+<h2>Lista Veicoli</h2>
+<ul>
+  <li *ngFor="let vehicle of vehicles">
+    {{ vehicle.tipo }} - {{ vehicle.capacita }} - {{ vehicle.stato }} - {{ vehicle.descrizioneManutenzione }}
+    <!-- Bottone per modificare un veicolo -->
+    <button (click)="onEditVehicle(vehicle)">Modifica</button>
+    <!-- Bottone per eliminare un veicolo -->
+    <button (click)="deleteVehicle(vehicle.id)">Elimina</button>
+    <!-- Bottone per impostare un veicolo in manutenzione -->
+    <button (click)="setInManutenzione(vehicle)">Imposta in manutenzione</button>
+  </li>
+</ul>

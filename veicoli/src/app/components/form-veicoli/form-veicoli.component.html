@@ -1,0 +1,29 @@
+<div *ngIf="vehicle">
+  <form (ngSubmit)="saveVehicle()">
+    <div>
+      <label for="tipo">Tipo:</label>
+      <input id="tipo" [(ngModel)]="vehicle.tipo" name="tipo" required>
+    </div>
+    <div>
+      <label for="capacita">Capacità:</label>
+      <input id="capacita" type="number" [(ngModel)]="vehicle.capacita" name="capacita" required>
+    </div>
+    <div>
+      <label for="stato">Stato:</label>
+      <select id="stato" [(ngModel)]="vehicle.stato" name="stato" required>
+        <option value="disponibile">Disponibile</option>
+        <option value="in manutenzione">In manutenzione</option>
+      </select>
+    </div>
+    <div>
+      <label for="descrizioneManutenzione">Descrizione Manutenzione:</label>
+      <input id="descrizioneManutenzione" [(ngModel)]="vehicle.descrizioneManutenzione" name="descrizioneManutenzione">
+    </div>
+    <button type="submit">{{ vehicle.id ? 'Modifica' : 'Salva' }}</button>
+    <button type="button" (click)="resetForm()">Reset</button>
+  </form>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+</div>
+<div *ngIf="!vehicle">
+  <button (click)="resetForm()">Crea nuovo veicolo</button>
+</div>

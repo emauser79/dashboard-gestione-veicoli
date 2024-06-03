@@ -1,0 +1,25 @@
+{
+  "vehicles": [
+    {
+      "id": "2",
+      "tipo": "auto",
+      "capacita": 5,
+      "stato": "in manutenzione",
+      "descrizioneManutenzione": "Controllo freni"
+    },
+    {
+      "id": "_a1i9zo3ee",
+      "tipo": "frfgf",
+      "capacita": 3,
+      "stato": "in manutenzione",
+      "descrizioneManutenzione": "gomme"
+    },
+    {
+      "id": "_woo7j65lf",
+      "tipo": "",
+      "capacita": 0,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    }
+  ]
+}
