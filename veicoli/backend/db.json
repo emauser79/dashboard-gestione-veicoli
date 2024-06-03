@@ -8,16 +8,23 @@
       "descrizioneManutenzione": "Controllo freni"
     },
     {
-      "id": "_a1i9zo3ee",
-      "tipo": "frfgf",
-      "capacita": 3,
+      "id": "_eds382c9e",
+      "tipo": "lupo",
+      "capacita": 2,
       "stato": "in manutenzione",
-      "descrizioneManutenzione": "gomme"
+      "descrizioneManutenzione": "cambio oilo"
     },
     {
-      "id": "_woo7j65lf",
-      "tipo": "",
-      "capacita": 0,
+      "id": "_flrcsh1kz",
+      "tipo": "barca",
+      "capacita": 3,
+      "stato": "in manutenzione",
+      "descrizioneManutenzione": "cambio gomme"
+    },
+    {
+      "id": "_xk0du5zm8",
+      "tipo": "ferrari",
+      "capacita": 3,
       "stato": "disponibile",
       "descrizioneManutenzione": ""
     }

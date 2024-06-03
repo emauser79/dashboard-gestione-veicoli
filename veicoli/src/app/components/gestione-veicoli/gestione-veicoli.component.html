@@ -1,0 +1,10 @@
+<h1>Gestione Veicoli</h1>
+<app-form-veicoli
+  [vehicle]="selectedVehicle"
+  (vehicleSaved)="onVehicleSaved($event)"
+></app-form-veicoli>
+<app-lista-veicoli
+  [vehicles]="vehicles"
+  (editVehicle)="onEditVehicle($event)"
+  (vehicleDeleted)="onVehicleDeleted()"
+></app-lista-veicoli>
