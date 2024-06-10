@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PrimeNGModule } from '../../../primeng.module';
@@ -7,11 +7,7 @@ import { Vehicle } from '../../models/vehicle.model';
 @Component({
   selector: 'app-dashboard-trasportatori',
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    PrimeNGModule
-  ],
+  imports: [CommonModule, FormsModule, PrimeNGModule],
   templateUrl: './dashboard-trasportatori.component.html',
   styleUrls: ['./dashboard-trasportatori.component.scss']
 })
@@ -32,18 +28,12 @@ export class DashboardTrasportatoriComponent {
 
   planMission() {
     // Implementa la logica per pianificare la missione
+    this.missionDate = null;
   }
 
   startMaintenance() {
     // Implementa la logica per avviare la manutenzione
-  }
-
-  onEdit(vehicle: Vehicle) {
-    this.editVehicle.emit(vehicle);
-  }
-
-  onDelete(vehicleId: number) {
-    // Logica per cancellare il veicolo
-    this.vehicleDeleted.emit();
+    this.selectedVehicleForMaintenance = null;
+    this.maintenanceType = '';
   }
 }

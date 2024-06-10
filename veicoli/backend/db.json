@@ -81,8 +81,85 @@
       "id": "_du3pjy0nz",
       "tipo": "ferrari",
       "capacita": 3,
+      "stato": "in manutenzione",
+      "descrizioneManutenzione": "taglaindo"
+    },
+    {
+      "id": "_quf75tu4f",
+      "tipo": "elicottero",
+      "capacita": 3,
       "stato": "disponibile",
       "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_zlrzfhu22",
+      "tipo": "bicicletta",
+      "capacita": 1,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_v6qva6vbg",
+      "tipo": "moto",
+      "capacita": 1,
+      "stato": "in manutenzione",
+      "descrizioneManutenzione": "cambio olio"
+    },
+    {
+      "id": "_1ugngg8gc",
+      "tipo": "ferrari",
+      "capacita": 1,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_0xshkhh5c",
+      "tipo": "bici",
+      "capacita": 2,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_nvvsk2wsw",
+      "tipo": "ckck",
+      "capacita": 2,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_xhipoddv9",
+      "tipo": "czxcz",
+      "capacita": 12,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_clfajvi2k",
+      "tipo": "auto",
+      "capacita": 1,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_eoyo6a247",
+      "tipo": "ferrari",
+      "capacita": 1,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_15uq9wu5m",
+      "tipo": "bicicletta",
+      "capacita": 1,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_qzxew38bg",
+      "tipo": "barca",
+      "capacita": 1,
+      "stato": "in manutenzione",
+      "descrizioneManutenzione": "cambio olio"
     }
   ]
 }

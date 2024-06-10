@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ListaVeicoliComponent } from '../lista-veicoli/lista-veicoli.component';
 import { FormVeicoliComponent } from '../form-veicoli/form-veicoli.component';
 import { Vehicle } from '../../models/vehicle.model';
@@ -12,11 +12,13 @@ import { DashboardTrasportatoriComponent } from '../dashboard-trasportatori/dash
   selector: 'app-gestione-veicoli',
   standalone: true,
   templateUrl: './gestione-veicoli.component.html',
-  imports: [CommonModule, ListaVeicoliComponent, FormVeicoliComponent, PrimeNGModule, DashboardTrasportatoriComponent,]
+  imports: [CommonModule, ListaVeicoliComponent, FormVeicoliComponent, PrimeNGModule, DashboardTrasportatoriComponent]
 })
 export class GestioneVeicoliComponent implements OnInit {
   vehicles: Vehicle[] = [];
   selectedVehicle: Vehicle | null = null;
+
+  @ViewChild(ListaVeicoliComponent) listaVeicoliComponent!: ListaVeicoliComponent;
 
   constructor(private veicoliService: VeicoliService) {}
 
@@ -36,22 +38,31 @@ export class GestioneVeicoliComponent implements OnInit {
       this.vehicles.push(vehicle);
     }
     this.selectedVehicle = null;
+    this.scrollToVehicleList();
   }
 
   onEditVehicle(vehicle: Vehicle) {
     this.selectedVehicle = vehicle;
-    //per far tornare automaticamente alla pagina form
     this.scrollToForm();
   }
 
   onVehicleDeleted() {
     this.loadVehicles();
   }
-  //per far tornare automaticamente alla pagina form
+
   scrollToForm() {
     const formElement = document.getElementById('form-veicoli-container');
     if (formElement) {
       formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  scrollToVehicleList() {
+    if (this.listaVeicoliComponent) {
+      const listaElement = document.querySelector('.lista-veicoli');
+      if (listaElement) {
+        listaElement.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 }
