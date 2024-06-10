@@ -1,10 +1,23 @@
-<h1>Gestione Veicoli</h1>
-<app-form-veicoli
-  [vehicle]="selectedVehicle"
-  (vehicleSaved)="onVehicleSaved($event)"
-></app-form-veicoli>
-<app-lista-veicoli
-  [vehicles]="vehicles"
-  (editVehicle)="onEditVehicle($event)"
-  (vehicleDeleted)="onVehicleDeleted()"
-></app-lista-veicoli>
+<p-card>
+  <h1>Dashboard</h1>
+  <app-dashboard-trasportatori
+    [vehicles]="vehicles"
+    (editVehicle)="onEditVehicle($event)"
+    (vehicleDeleted)="onVehicleDeleted()"
+  ></app-dashboard-trasportatori>
+</p-card>
+<h1 class="titolo">Gestione Veicoli</h1>
+<p-card id="form-veicoli-container">
+  <app-form-veicoli
+    [vehicle]="selectedVehicle"
+    (vehicleSaved)="onVehicleSaved($event)"
+  ></app-form-veicoli>
+</p-card>
+<p-card>
+  <app-lista-veicoli
+    [vehicles]="vehicles"
+    (editVehicle)="onEditVehicle($event)"
+    (vehicleDeleted)="onVehicleDeleted()"
+  ></app-lista-veicoli>
+</p-card>
+

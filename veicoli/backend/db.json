@@ -15,14 +15,70 @@
       "descrizioneManutenzione": "cambio oilo"
     },
     {
-      "id": "_flrcsh1kz",
-      "tipo": "barca",
+      "id": "_ma8v1qzju",
+      "tipo": "aereo",
       "capacita": 3,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_iy27df1sb",
+      "tipo": "gvdfb",
+      "capacita": 2,
+      "stato": "disponibile",
+      "descrizioneManutenzione": "tagliando fatto"
+    },
+    {
+      "id": "_c3ho350dt",
+      "tipo": "fiat",
+      "capacita": 2,
       "stato": "in manutenzione",
       "descrizioneManutenzione": "cambio gomme"
     },
     {
-      "id": "_xk0du5zm8",
+      "id": "_qfssxiny9",
+      "tipo": "barca",
+      "capacita": 2,
+      "stato": "in manutenzione",
+      "descrizioneManutenzione": "gomme"
+    },
+    {
+      "id": "_iayds9cre",
+      "tipo": "poshe",
+      "capacita": 2,
+      "stato": "in manutenzione",
+      "descrizioneManutenzione": "cambio gomme"
+    },
+    {
+      "id": "_8ca9fc1yq",
+      "tipo": "fiat",
+      "capacita": 3,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_ke6d90ycm",
+      "tipo": "barca",
+      "capacita": 3,
+      "stato": "in manutenzione",
+      "descrizioneManutenzione": "cambio olio"
+    },
+    {
+      "id": "_7oax8ebj4",
+      "tipo": "autovettura",
+      "capacita": 3,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_fvhwzbqjs",
+      "tipo": "motoscafo",
+      "capacita": 2,
+      "stato": "disponibile",
+      "descrizioneManutenzione": ""
+    },
+    {
+      "id": "_du3pjy0nz",
       "tipo": "ferrari",
       "capacita": 3,
       "stato": "disponibile",

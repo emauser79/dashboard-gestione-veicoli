@@ -1,0 +1,23 @@
+<!-- dashboard-trasportatori.component.html -->
+<p-tabView class="dashboard-trasportatori">
+  <p-tabPanel header="Gestione Veicoli">
+    <!-- <app-gestione-veicoli></app-gestione-veicoli> -->
+  </p-tabPanel>
+  <p-tabPanel header="Pianificazione e Gestione Missioni">
+    <p-card header="Pianificazione Missioni">
+      <div class="spaziatura">
+        <p-calendar [(ngModel)]="missionDate" [showTime]="true" hourFormat="24"></p-calendar>
+        <p-button label="Pianifica Missione" (click)="planMission()" class="pulsante-align"></p-button>
+      </div>
+    </p-card>
+  </p-tabPanel>
+  <p-tabPanel header="Manutenzione Veicoli">
+    <p-card header="Manutenzione Veicoli">
+      <div class="spaziatura">
+        <p-dropdown [(ngModel)]="selectedVehicleForMaintenance" [options]="vehicles" optionLabel="tipo" placeholder="Seleziona un veicolo"></p-dropdown>
+        <p-dropdown [(ngModel)]="maintenanceType" [options]="maintenanceTypes" optionLabel="label" optionValue="value" placeholder="Seleziona tipo di manutenzione"></p-dropdown>
+        <p-button label="Avvia Manutenzione" (click)="startMaintenance()" class="pulsante-alignDue"></p-button>
+      </div>
+    </p-card>
+  </p-tabPanel>
+</p-tabView>

@@ -1,13 +1,15 @@
+// form-veicoli.component.ts
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { VeicoliService } from '../../servizi/veicoli.service';
 import { Vehicle } from '../../models/vehicle.model';
 import { CommonModule } from '@angular/common';
+import { PrimeNGModule } from '../../../primeng.module';
 
 @Component({
   selector: 'app-form-veicoli',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, PrimeNGModule],
   templateUrl: './form-veicoli.component.html',
 })
 export class FormVeicoliComponent implements OnChanges {
@@ -17,14 +19,22 @@ export class FormVeicoliComponent implements OnChanges {
 
   errorMessage: string = '';
 
+  stati = [
+    { label: 'Disponibile', value: 'disponibile' },
+    { label: 'In manutenzione', value: 'in manutenzione' }
+  ];
+
   constructor(private veicoliService: VeicoliService) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['vehicle'] && this.vehicle) {
-      // Aggiorna il veicolo se ci sono cambiamenti
-      this.vehicle = { ...this.vehicle };
+      // Verifica se lo stato del veicolo è valido
+      const statoValido = this.stati.some((s) => s.value === this.vehicle?.stato);
+      if (!statoValido) {
+        // Imposta lo stato predefinito se quello attuale non è valido
+        this.vehicle.stato = this.stati[0].value;
+      }
     } else {
-      // Resetta il form se non ci sono cambiamenti
       this.resetForm();
     }
   }
@@ -34,14 +44,12 @@ export class FormVeicoliComponent implements OnChanges {
 
     try {
       if (this.vehicle.id) {
-        // Aggiorna un veicolo esistente
         await this.veicoliService.updateVehicle(this.vehicle);
       } else {
-        // Crea un nuovo veicolo
         this.vehicle.id = this.generateUniqueId();
         await this.veicoliService.createVehicle(this.vehicle);
       }
-      this.vehicleSaved.emit(this.vehicle); // Emmette l'evento vehicleSaved
+      this.vehicleSaved.emit(this.vehicle);
       this.resetForm();
     } catch (error) {
       this.errorMessage = 'Errore durante il salvataggio del veicolo. Si prega di riprovare più tardi.';

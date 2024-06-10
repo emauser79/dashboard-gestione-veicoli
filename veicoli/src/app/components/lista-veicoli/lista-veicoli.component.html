@@ -1,12 +1,26 @@
+<!-- lista-veicoli.component.html -->
 <h2>Lista Veicoli</h2>
-<ul>
-  <li *ngFor="let vehicle of vehicles">
-    {{ vehicle.tipo }} - {{ vehicle.capacita }} - {{ vehicle.stato }} - {{ vehicle.descrizioneManutenzione }}
-    <!-- Bottone per modificare un veicolo -->
-    <button (click)="onEditVehicle(vehicle)">Modifica</button>
-    <!-- Bottone per eliminare un veicolo -->
-    <button (click)="deleteVehicle(vehicle.id)">Elimina</button>
-    <!-- Bottone per impostare un veicolo in manutenzione -->
-    <button (click)="setInManutenzione(vehicle)">Imposta in manutenzione</button>
-  </li>
-</ul>
+<p-table [value]="vehicles" class="lista-veicoli">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Tipo</th>
+      <th>Capacità</th>
+      <th>Stato</th>
+      <th>Descrizione Manutenzione</th>
+      <th>Azioni</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-vehicle>
+    <tr>
+      <td data-label="Tipo">{{ vehicle.tipo }}</td>
+      <td data-label="Capacità">{{ vehicle.capacita }}</td>
+      <td data-label="Stato">{{ vehicle.stato }}</td>
+      <td data-label="Descrizione Manutenzione">{{ vehicle.descrizioneManutenzione }}</td>
+      <td data-label="Azioni" class="spaziatura">
+        <p-button label="Modifica" icon="pi pi-pencil" (click)="onEditVehicle(vehicle)"></p-button>
+        <p-button label="Elimina" icon="pi pi-trash" (click)="deleteVehicle(vehicle.id)" class="p-button-danger"></p-button>
+        <p-button label="In Manutenzione" icon="pi pi-cog" (click)="setInManutenzione(vehicle)"></p-button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
