@@ -11,6 +11,7 @@ import { PrimeNGModule } from '../../../primeng.module';
   standalone: true,
   imports: [CommonModule, FormsModule, PrimeNGModule],
   templateUrl: './form-veicoli.component.html',
+  styleUrls: ['./form-veicoli.component.scss']
 })
 export class FormVeicoliComponent implements OnChanges {
   @Input() vehicle: Vehicle | null = null; // Veicolo attualmente in modifica o creazione

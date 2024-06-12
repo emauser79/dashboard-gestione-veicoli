@@ -12,6 +12,7 @@ import { DashboardTrasportatoriComponent } from '../dashboard-trasportatori/dash
   selector: 'app-gestione-veicoli',
   standalone: true,
   templateUrl: './gestione-veicoli.component.html',
+  styleUrls: ['./gestione-veicoli.component.scss'],
   imports: [CommonModule, ListaVeicoliComponent, FormVeicoliComponent, PrimeNGModule, DashboardTrasportatoriComponent]
 })
 export class GestioneVeicoliComponent implements OnInit {

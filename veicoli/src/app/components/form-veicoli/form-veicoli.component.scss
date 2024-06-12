@@ -1,0 +1,39 @@
+
+  .p-fluid .p-field {
+    margin-bottom: 1em;
+  }
+
+  .p-error {
+    color: #f44336;
+    font-weight: bold;
+  }
+
+  .p-button {
+    margin-right: 0.5em;
+    margin-bottom: 0em;
+    margin-left: 0.5em;
+  }
+
+  .margini {
+    display: grid;
+    gap: 0.5em;
+  }
+
+
+
+  .form-veicoli {
+    .p-card {
+      padding: 1em;
+    }
+    .p-field {
+      display: flex;
+      flex-direction: column;
+    }
+    @media (max-width: 768px) {
+      .margini {
+        display: grid;
+        gap: 0.5em;
+      }
+    }
+  }
+

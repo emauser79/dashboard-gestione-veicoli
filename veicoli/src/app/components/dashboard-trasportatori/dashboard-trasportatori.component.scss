@@ -1,2 +1,65 @@
+/* Stili per dashboard-trasportatori */
+.dashboard-trasportatori {
+  .p-tabView {
+    .p-tabPanel {
+      padding: 0.5em;
+    }
+  }
+  
+  .pulsante-align {
+    margin-left: 0.5rem;
+  }
 
+  @media (max-width: 768px) {
+    .p-tabView {
+      .p-tabPanel {
+        padding: 0.5em;
+      }
+    }
+    .p-card {
+      .p-calendar,
+      .p-dropdown {
+        width: 100%;
+        margin-top: 0.5em;
+      }
+    }
+    .manutenzione-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em; /* Spazio tra gli elementi del modulo */
+      margin-left: -17px;
+      
+      .p-dropdown, .p-button {
+        width: 100%;
+      }
+    }
+    .spaziatura {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em; /* Spazio tra gli elementi del modulo */
+    }
+  }
 
+  @media screen and (min-width: 810px) and (max-width: 1080px) {
+    .manutenzione-form {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em; /* Spazio tra gli elementi del modulo */
+      margin-left: -17px;
+
+      .pulsante-alignDue {
+        width: 70% !important;
+        height: auto !important;
+        max-height: 40px !important; /* Altezza massima del pulsante */
+        align-self: flex-start; /* Allinea il pulsante all'inizio del contenitore */
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .titolo {
+      text-align: center;
+      margin-top: 45px;
+    }
+  }
+}

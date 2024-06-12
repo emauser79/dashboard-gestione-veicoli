@@ -10,6 +10,7 @@ import { PrimeNGModule } from '../../../primeng.module';
   standalone: true,
   imports: [CommonModule, PrimeNGModule],
   templateUrl: './lista-veicoli.component.html',
+  styleUrls: ['./lista-veicoli.component.scss']
 })
 export class ListaVeicoliComponent implements OnInit {
   @Input() vehicles: Vehicle[] = [];

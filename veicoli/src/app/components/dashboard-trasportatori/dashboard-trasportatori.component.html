@@ -12,7 +12,7 @@
   </p-tabPanel>
   <p-tabPanel header="Manutenzione Veicoli">
     <p-card header="Manutenzione Veicoli">
-      <div class="spaziatura">
+      <div class="spaziatura manutenzione-form">
         <p-dropdown [(ngModel)]="selectedVehicleForMaintenance" [options]="vehicles" optionLabel="tipo" placeholder="Seleziona un veicolo"></p-dropdown>
         <p-dropdown [(ngModel)]="maintenanceType" [options]="maintenanceTypes" optionLabel="label" optionValue="value" placeholder="Seleziona tipo di manutenzione"></p-dropdown>
         <p-button label="Avvia Manutenzione" (click)="startMaintenance()" class="pulsante-alignDue"></p-button>

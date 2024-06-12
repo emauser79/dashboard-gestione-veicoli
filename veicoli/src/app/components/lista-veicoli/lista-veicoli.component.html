@@ -1,13 +1,12 @@
-<!-- lista-veicoli.component.html -->
-<h2>Lista Veicoli</h2>
+<h2 class="titoloDue">Lista Veicoli</h2>
 <p-table [value]="vehicles" class="lista-veicoli">
   <ng-template pTemplate="header">
-    <tr>
-      <th>Tipo</th>
-      <th>Capacità</th>
-      <th>Stato</th>
-      <th>Descrizione Manutenzione</th>
-      <th>Azioni</th>
+    <tr class="centrale">
+      <th class="header-cell"><div>Tipo</div></th>
+      <th class="header-cell"><div>Capacità</div></th>
+      <th class="header-cell"><div>Stato</div></th>
+      <th class="header-cell"><div>Descrizione Manutenzione</div></th>
+      <th class="header-cell"><div>Azioni</div></th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-vehicle>
